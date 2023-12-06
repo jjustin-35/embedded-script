@@ -1,0 +1,11 @@
+{
+  "name": "embed-comps",
+  "version": "1.0.0",
+  "description": "embeded components of kdan website header and footer",
+  "main": "index.js",
+  "author": "jjustin-chen <justin.chen@kdanmobile.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.2"
+  }
+}
