@@ -1,8 +1,11 @@
 class Header extends HTMLDivElement {
   constructor() {
     super();
-    this.innerHTML = `<h1>Header</h1>`;
+    this.innerHTML = `
+    <div class='header-wrapper'>
+      
+    </div>`;
   }
 }
 
-customElements.define('kdan-header', Header, { extends: 'div' });
+customElements.define("kdan-header", Header, { extends: "div" });
