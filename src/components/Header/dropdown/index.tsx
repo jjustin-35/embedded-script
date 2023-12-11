@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
-import { TFunctionType } from '@/constants/types/global';
-import { MenuType } from '@/containers/header/data';
+import { TFunctionType } from '../../../constants/types';
+import { MenuType } from '../../../containers/Header/data';
 
 import DropdownComponent from './component';
 import { DropdownOuter, DropdownWrapper, DropdownInner } from './styled';

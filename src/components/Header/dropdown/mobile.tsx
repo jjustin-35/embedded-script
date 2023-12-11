@@ -1,8 +1,5 @@
-import Typography from '@kdanmobile/kdan-ui/dist/Typography';
-
-import LinkWrapper from '@/components/link';
-import { TFunctionType } from '@/constants/types/global';
-import { ColumnType, ColumnItemType } from '@/containers/header/data';
+import { TFunctionType } from '../../../constants/types';
+import { ColumnType, ColumnItemType } from '../../../containers/Header/data';
 import { CompWrapper, Content, Col, ContentTitle } from './styled';
 
 type ChildProps = {
@@ -19,20 +16,20 @@ type Props = {
 const Cell = ({ t, data, item }: ChildProps) => {
   const href = t(item.link.href, { ...item.link?.localeParam });
   return (
-    <LinkWrapper {...item.link} href={href}>
+    <a {...item.link} href={href}>
       <Content isTitleOnly={!data.title}>
         <ContentTitle>{t(item.title)}</ContentTitle>
       </Content>
-    </LinkWrapper>
+    </a>
   );
 };
 
 const MobileComponent = ({ data, t }: Props) => (
   <CompWrapper>
     {data.title && (
-      <Typography variant="b2" color="N25">
+      <p>
         {t(data.title)}
-      </Typography>
+      </p>
     )}
     <Col>
       {data.items.map((item) => (

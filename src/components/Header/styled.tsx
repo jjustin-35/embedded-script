@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
-import { device } from '@/constants/commonStyle';
-import NextLink from 'next/link';
+import { device } from '../../constants/commonStyle';
 
 type HeaderWrapperProps = {
   isScrolldown: boolean;
@@ -70,7 +69,7 @@ export const ItemWrapper = styled.a`
   }
 `;
 
-export const Brand = styled(NextLink)`
+export const Brand = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,7 +179,7 @@ export const MobileMenuInner = styled.div`
   }
 `;
 
-export const Link = styled(NextLink)`
+export const Link = styled.a`
   padding: 8px 10px;
   color: rgba(0, 0, 0, 0.8);
   display: flex;

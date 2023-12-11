@@ -1,22 +1,15 @@
-import { useTranslation } from 'next-i18next';
-import { useEffect, useState } from 'react';
-import { bool } from 'prop-types';
+// import { useTranslation } from 'react-i18next';
+import React, { useEffect, useState } from 'react';
 
-import { breakpoints } from '@/constants/commonStyle';
-import Header from '../../components/header';
-import data, { BtnsType } from './data';
+import { breakpoints } from '../../constants/commonStyle';
+import Header from '../../components/Header';
+import data from './data';
 
-type Props = {
-  type?: BtnsType;
-  isErrorPage?: boolean;
-  isCampaign?: boolean;
-};
-
-const HeaderContainer = ({ type = 'default', isErrorPage, isCampaign }: Props) => {
+const HeaderContainer = () => {
   const [isScrolldown, setIsScrolldown] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useTranslation(['common', 'link', 'campaign']);
+  const { t } = { t: (text: string) => text};
 
   const scrollHandler = () => {
     if (window.scrollY > 70) {
@@ -71,15 +64,9 @@ const HeaderContainer = ({ type = 'default', isErrorPage, isCampaign }: Props) =
       onTrigger={triggerHandler}
       isOpen={isOpen}
       isMobile={isMobile}
-      type={type}
-      isErrorPage={isErrorPage}
-      isCampaign={isCampaign}
+      type="default"
     />
   );
-};
-
-HeaderContainer.propTypes = {
-  hasEventBar: bool,
 };
 
 export default HeaderContainer;

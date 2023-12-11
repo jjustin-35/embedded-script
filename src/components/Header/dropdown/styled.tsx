@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { device, colors } from '@/constants/commonStyle';
+import { device, colors } from '../../../constants/commonStyle';
 
 type OuterProps = {
   isSmall?: boolean;

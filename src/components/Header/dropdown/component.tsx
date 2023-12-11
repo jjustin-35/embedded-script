@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
 import { TFunctionType } from "../../../constants/types";
-import { BottomItemType, MenuType } from "containers/header/data";
+import { BottomItemType, MenuType } from "../../../containers/Header/data";
 
 import LinkImg from "../../GeneralLink";
 import DesktopComponent from "./desktop";

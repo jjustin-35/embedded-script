@@ -1,5 +1,5 @@
-import { TFunctionType } from '@/constants/types/global';
-import { DataType } from '@/containers/header/data';
+import { TFunctionType } from '../../../constants/types';
+import { DataType } from '../../../containers/Header/data';
 import MenuCollapse from './menuCollapse';
 import { MobileMenuWrapper, MobileMenuOuter, MobileMenuInner } from '../styled';
 interface Props {

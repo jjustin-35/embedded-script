@@ -1,6 +1,8 @@
-import { CREATIVE_STORE, DOTTEDSIGN, KDAN_CLOUD, MARK_UP, INSPOD, ADNEX } from '../../config';
+import configs from '../../config';
 import { ImageType } from '../../constants/types';
-import { ButtonComponentType } from '@/components/buttonComponent';
+import { ButtonComponentType } from '../../components/Button';
+
+const { CREATIVE_STORE, DOTTEDSIGN, KDAN_CLOUD, MARK_UP, INSPOD, ADNEX } = configs;
 
 type LinkType = {
   href: string;

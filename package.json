@@ -2,7 +2,7 @@
   "name": "embed-comps",
   "version": "1.0.0",
   "description": "embedded components of kdan website header and footer",
-  "main": "index.js",
+  "main": "./src/index.tsx",
   "author": "jjustin-chen <justin.chen@kdanmobile.com>",
   "license": "MIT",
   "scripts": {

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-import { MenuType } from '@/containers/header/data';
-import { TFunctionType } from '@/constants/types/global';
+import { MenuType } from '../../../containers/Header/data';
+import { TFunctionType } from '../../../constants/types';
 
-import Collapse from '@/components/collapse';
+import Collapse from '../../Collapse';
 import DropdownComponent from '../dropdown/component';
 import { ItemWrapper, ArrowIcon } from '../styled';
 
@@ -13,11 +13,11 @@ interface Props {
   idx?: number;
 }
 
-interface TrggerType {
+interface TriggerType {
   text: string;
   isOpen: boolean;
 }
-const Trigger = ({ text, isOpen }: TrggerType) => (
+const Trigger = ({ text, isOpen }: TriggerType) => (
   <ItemWrapper>
     {text}
     <ArrowIcon src="/images/icons/ic-down-arrow.svg" alt="ic-down-arrow" isOpen={isOpen} />
