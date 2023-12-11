@@ -97,6 +97,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/components/Footer/index.tsx":
+/*!*****************************************!*\
+  !*** ./src/components/Footer/index.tsx ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar Footer = function Footer() {\n  return /*#__PURE__*/React.createElement(\"div\", null, \"test\");\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);\n\n//# sourceURL=webpack://embed-comps/./src/components/Footer/index.tsx?");
+
+/***/ }),
+
 /***/ "./src/components/GeneralLink/data.tsx":
 /*!*********************************************!*\
   !*** ./src/components/GeneralLink/data.tsx ***!
@@ -262,6 +273,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/constants/globalStyle.tsx":
+/*!***************************************!*\
+  !*** ./src/constants/globalStyle.tsx ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\n/* harmony import */ var _commonStyle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./commonStyle */ \"./src/constants/commonStyle.tsx\");\nvar _templateObject;\nfunction _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }\n\n\nvar GlobalStyle = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.createGlobalStyle)(_templateObject || (_templateObject = _taggedTemplateLiteral([\"\\nhtml {\\n  height: 100%;\\n  scroll-behavior: smooth;\\n}\\n\\nbody {\\n  min-height: 100%;\\n  margin: 0;\\n  padding: 0;\\n  position: relative;\\n  overflow-x: hidden;\\n}\\n::-webkit-scrollbar {\\n  display: none;\\n}\\n* {\\n  outline: none;\\n  outline-width: 0;\\n\\n  box-sizing: border-box;\\n}\\n*:focus {\\n  outline: none;\\n  outline-width: 0;\\n}\\n\\n*:lang(en) {\\n  font-family: 'Clear Sans', sans-serif;\\n}\\n*:lang(es) {\\n  font-family: 'Clear Sans', sans-serif;\\n}\\n*:lang(zh-tw) {\\n  font-family: 'Noto Sans TC', sans-serif;\\n}\\n*:lang(zh-cn) {\\n  font-family: 'Noto Sans SC', sans-serif;\\n}\\n*:lang(ja) {\\n  font-family: 'Noto Sans JP', sans-serif;\\n}\\n\\nh1,\\nh2,\\nh3,\\nh4,\\nh5,\\nh6,\\np,\\na,\\nbutton {\\n  margin-top: 0;\\n  padding: 0;\\n  margin: 0;\\n  padding-right: 0;\\n  padding-left: 0;\\n}\\n\\nh1 {\\n  font-size: 48px;\\n  line-height: 1.2;\\n  margin-bottom: 30px;\\n}\\nh2 {\\n  font-size: 36px;\\n  line-height: 1.15;\\n  margin-bottom: 30px;\\n}\\nh3 {\\n  font-size: 26px;\\n  line-height: 1.15;\\n  margin-bottom: 20px;\\n}\\nh4 {\\n  font-size: 14px;\\n  line-height: 1.15;\\n  margin-bottom: 10px;\\n}\\na {\\n  text-decoration: none;\\n}\\n\\n@media screen and (max-width: 990px) {\\n  h1 {\\n    font-size: 40px;\\n  }\\n  h2 {\\n    font-size: 24px;\\n  }\\n  h3 {\\n    font-size: 16px;\\n  }\\n}\\n\\n@media screen and (\", \") {\\n  h1 {\\n    font-size: 24px;\\n  }\\n  h2 {\\n    font-size: 22px;\\n  }\\n  h3 {\\n    font-size: 20px;\\n  }\\n}\\n\\n#launcher {\\n  display: none;\\n}\\n\\n#ot-sdk-btn-floating {\\n  display: none;\\n}\\n\"])), _commonStyle__WEBPACK_IMPORTED_MODULE_0__.device.mobile);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GlobalStyle);\n\n//# sourceURL=webpack://embed-comps/./src/constants/globalStyle.tsx?");
+
+/***/ }),
+
 /***/ "./src/containers/Header/data.tsx":
 /*!****************************************!*\
   !*** ./src/containers/Header/data.tsx ***!
@@ -291,7 +313,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _containers_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./containers/Header */ \"./src/containers/Header/index.tsx\");\n\n\n\nvar headerNode = document.createElement(\"div\");\nvar headerRoot = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(headerNode);\nheaderRoot.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_containers_Header__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\nvar firstChild = document.body.firstChild;\nif (firstChild) {\n  document.body.insertBefore(headerNode, firstChild);\n} else {\n  document.body.appendChild(headerNode);\n}\n\n// const footerNode = document.createElement(\"div\");\n// const footerRoot = createRoot(footerNode);\n// footerRoot.render(<Footer />);\n// document.body.appendChild(footerNode);\n\n//# sourceURL=webpack://embed-comps/./src/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _constants_globalStyle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants/globalStyle */ \"./src/constants/globalStyle.tsx\");\n/* harmony import */ var _containers_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./containers/Header */ \"./src/containers/Header/index.tsx\");\n/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Footer */ \"./src/components/Footer/index.tsx\");\n\n\n\n\n\nvar headerNode = document.createElement(\"div\");\nvar headerRoot = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(headerNode);\nheaderRoot.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_constants_globalStyle__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_containers_Header__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)));\nvar firstChild = document.body.firstChild;\nif (firstChild) {\n  document.body.insertBefore(headerNode, firstChild);\n} else {\n  document.body.appendChild(headerNode);\n}\nvar footerNode = document.createElement(\"div\");\nvar footerRoot = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(footerNode);\nfooterRoot.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null));\ndocument.body.appendChild(footerNode);\n\n//# sourceURL=webpack://embed-comps/./src/index.tsx?");
 
 /***/ }),
 

@@ -42,6 +42,19 @@ module.exports = {
         exclude: /node_modules/,
         use: "babel-loader",
       },
+      {
+        test: /\.(txt|jpg|png|svg|webp)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              context: "",
+              emitFile: true,
+              name: "/public/**/[path][name].[hash].[ext]",
+            },
+          },
+        ],
+      },
     ],
   },
 };
