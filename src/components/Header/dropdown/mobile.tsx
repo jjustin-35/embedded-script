@@ -1,3 +1,4 @@
+import React from 'react';
 import { TFunctionType } from '../../../constants/types';
 import { ColumnType, ColumnItemType } from '../../../containers/Header/data';
 import { CompWrapper, Content, Col, ContentTitle } from './styled';

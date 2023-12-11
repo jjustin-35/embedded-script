@@ -1,8 +1,7 @@
-import { useState } from "react";
+
 
 const Footer = () => {
-  const [text, setText] = useState("Footer");
-  return <div>{text}</div>;
+  return <div>test</div>;
 };
 
 export default Footer;

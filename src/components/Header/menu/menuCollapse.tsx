@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import { MenuType } from '../../../containers/Header/data';
 import { TFunctionType } from '../../../constants/types';

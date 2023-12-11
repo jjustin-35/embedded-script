@@ -1,15 +1,21 @@
-import { ReactNode, FocusEvent, useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from "react";
 
-import { ContentWrapper, Inner, Wrapper, TriggerWrapper } from './styled';
+import { ContentWrapper, Inner, Wrapper, TriggerWrapper } from "./styled";
 export interface CollapseProps {
   defaultOpen?: boolean;
   triggerHandler?: (isOpen?: boolean) => void;
-  onBlur?: (e?: FocusEvent) => void;
-  trigger: ReactNode;
-  children: ReactNode;
+  onBlur?: (e?: React.FocusEvent) => void;
+  trigger: React.ReactNode;
+  children: React.ReactNode;
 }
 
-const Collapse = ({ defaultOpen = false, triggerHandler, onBlur, trigger, children }: CollapseProps) => {
+const Collapse = ({
+  defaultOpen = false,
+  triggerHandler,
+  onBlur,
+  trigger,
+  children,
+}: CollapseProps) => {
   const innerRef = useRef<HTMLDivElement>(null);
   const [isOpen, setOpen] = useState(false);
   const [maxHeight, setMaxHeight] = useState(0);
@@ -19,7 +25,7 @@ const Collapse = ({ defaultOpen = false, triggerHandler, onBlur, trigger, childr
     if (triggerHandler) triggerHandler(!isOpen);
   };
 
-  const handleBlur = (e: FocusEvent) => {
+  const handleBlur = (e: React.FocusEvent) => {
     if (onBlur) onBlur(e);
     setOpen(false);
   };

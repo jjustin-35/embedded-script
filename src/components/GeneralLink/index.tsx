@@ -1,3 +1,4 @@
+import React from 'react';
 import { Arrow } from './styled';
 import data from './data';
 

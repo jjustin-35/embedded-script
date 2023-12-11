@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 
 import { TFunctionType } from "../../../constants/types";
 import { BottomItemType, MenuType } from "../../../containers/Header/data";
@@ -20,7 +20,7 @@ interface Props {
 }
 
 const BtmItem = ({ t, item }: ChildProps) => (
-  <a {...item}>
+  <a href={item.href} target={item.target || "_blank"} rel="noopener">
     <BtmLink>
       {t(item.text)}
       <LinkImg />

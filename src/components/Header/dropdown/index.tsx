@@ -1,11 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
-import { TFunctionType } from '../../../constants/types';
-import { MenuType } from '../../../containers/Header/data';
+import { TFunctionType } from "../../../constants/types";
+import { MenuType } from "../../../containers/Header/data";
 
-import DropdownComponent from './component';
-import { DropdownOuter, DropdownWrapper, DropdownInner } from './styled';
-import { ItemWrapper, ArrowIcon } from '../styled';
+import DropdownComponent from "./component";
+import { DropdownOuter, DropdownWrapper, DropdownInner } from "./styled";
+import { ItemWrapper, ArrowIcon } from "../styled";
 
 interface Props {
   data: MenuType;
@@ -22,7 +22,11 @@ interface TriggerType {
 const Trigger = ({ text, isOpen }: TriggerType) => (
   <ItemWrapper>
     {text}
-    <ArrowIcon src="/images/icons/ic-down-arrow.svg" alt="ic-down-arrow" isOpen={isOpen} />
+    <ArrowIcon
+      src="/images/icons/ic-down-arrow.svg"
+      alt="ic-down-arrow"
+      isOpen={isOpen}
+    />
   </ItemWrapper>
 );
 
@@ -48,12 +52,12 @@ const Dropdown = ({ data, t, indx, isMobile }: Props) => {
       handleBlur();
     };
 
-    document.addEventListener('click', handleEvent);
-    document.addEventListener('scroll', handleBlur);
+    document.addEventListener("click", handleEvent);
+    document.addEventListener("scroll", handleBlur);
 
     return () => {
-      document.removeEventListener('click', handleEvent);
-      document.removeEventListener('scroll', handleBlur);
+      document.removeEventListener("click", handleEvent);
+      document.removeEventListener("scroll", handleBlur);
     };
   }, []);
 
@@ -73,7 +77,12 @@ const Dropdown = ({ data, t, indx, isMobile }: Props) => {
       </div>
       <DropdownWrapper>
         <DropdownInner ref={innerRef} maxHeight={maxHeight} isOpen={isOpen}>
-          <DropdownComponent data={data} t={t} indx={indx} isMobile={isMobile} />
+          <DropdownComponent
+            data={data}
+            t={t}
+            indx={indx}
+            isMobile={isMobile}
+          />
         </DropdownInner>
       </DropdownWrapper>
     </DropdownOuter>

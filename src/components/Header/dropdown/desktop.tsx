@@ -1,3 +1,4 @@
+import React from "react";
 import { ColumnType, ColumnItemType } from "../../../containers/Header/data";
 
 import {
@@ -24,7 +25,7 @@ type Props = {
 const Cell = ({ t, data, item }: ChildProps) => {
   const href = t(item.link.href, { ...item.link?.localeParam });
   return (
-    <a {...item.link} href={href}>
+    <a target={item.link.target} href={href}>
       <Content isTitleOnly={!data.title}>
         <ContentTitle>{t(item.title)}</ContentTitle>
         {item.desc && (

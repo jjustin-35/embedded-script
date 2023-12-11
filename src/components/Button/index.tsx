@@ -1,9 +1,9 @@
-import { MouseEvent } from 'react';
+import React, { MouseEvent } from "react";
 
-import { TFunctionType } from '../../constants/types';
-import { ButtonStyleType } from './styled';
+import { TFunctionType } from "../../constants/types";
+import { ButtonStyleType } from "./styled";
 
-import { Wrapper } from './styled';
+import { Wrapper } from "./styled";
 
 export type ButtonComponentType = ButtonStyleType & {
   text: string;
@@ -15,10 +15,10 @@ export type ButtonComponentType = ButtonStyleType & {
 const Button = ({
   text,
   id,
-  btnTheme = 'default',
+  btnTheme = "default",
   btnColor,
-  round = 'normal',
-  size = 'medium',
+  round = "normal",
+  size = "medium",
   isDisabled = false,
   onClick,
   t,
