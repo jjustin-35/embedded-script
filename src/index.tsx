@@ -22,5 +22,10 @@ if (firstChild) {
 
 const footerNode = document.createElement("div");
 const footerRoot = createRoot(footerNode);
-footerRoot.render(<Footer />);
+footerRoot.render(
+  <>
+    <GlobalStyle />
+    <Footer />
+  </>
+);
 document.body.appendChild(footerNode);
