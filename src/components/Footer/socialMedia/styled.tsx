@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from '@/constants/commonStyle';
+import { device } from '../../../constants/commonStyle';
 
 const Wrapper = styled.div`
   position: relative;

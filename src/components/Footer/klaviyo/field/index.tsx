@@ -2,12 +2,12 @@ import { Wrapper } from './styled';
 
 interface Props {
   placeholder: string;
-  input: any;
+  name: string;
 }
 
-const renderField = ({ placeholder = '', input = {} }: Props) => (
+const renderField = ({ name, placeholder = '' }: Props) => (
   <Wrapper>
-    <input {...input} type="text" placeholder={placeholder} />
+    <input name={name} type="text" placeholder={placeholder} />
   </Wrapper>
 );
 

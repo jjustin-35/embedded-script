@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import LangBar from "@/components/FooterLangBar";
+import LangBar from "../../components/FooterLangBar";
 import Social from "./social";
 import Info from "../../containers/Footer/info";
 

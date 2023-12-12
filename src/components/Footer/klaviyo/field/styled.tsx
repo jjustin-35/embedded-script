@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from '@/constants/commonStyle';
+import { device, colors } from '../../../../constants/commonStyle';
 
 export const Wrapper = styled.div`
   input {
@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     border-radius: 4px;
     border: none;
     background-color: #363636;
-    color: white;
+    color: ${colors.common.white};
     font-size: 16px;
     padding: 5px 15px;
     margin-right: 10px;

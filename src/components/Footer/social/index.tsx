@@ -1,5 +1,5 @@
-import { TFunctionType } from '@/constants/types/global';
-import KlaviyoForm from 'containers/Footer/klaviyo';
+import { TFunctionType } from '../../../constants/types';
+import KlaviyoForm from '../klaviyo';
 import SocialMedia from '../socialMedia';
 
 import { Wrapper, Col, Title, Subtitle } from './styled';

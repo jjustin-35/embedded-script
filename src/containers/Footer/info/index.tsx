@@ -3,7 +3,7 @@ import { i18n } from 'react-i18next';
 
 import { TFunctionType, LangType } from '../../../constants/types';
 import { DataType } from '../../../components/Footer/data';
-
+import language from '../../../constants/language';
 import langViewable from '../../../helpers/langViewable';
 import Info from '../../../components/Footer/info';
 
@@ -18,11 +18,11 @@ const InfoContainer = ({ t, type, dataset }: Props) => {
 
   const lng = i18n.language as LangType;
 
-  const isNotEnAndJa = !langViewable(lng, ['en', 'ja']);
+  const isNotEnAndJa = !langViewable(lng, [language.EN, language.JA]);
 
-  if (type === 'pdf-reader' && lng === 'ja') {
+  if (type === 'pdf-reader' && lng === language.JA) {
     data = dataset.info.normal;
-  } else if (type === 'pdf-reader' && lng !== 'en') {
+  } else if (type === 'pdf-reader' && lng !== language.EN) {
     data = dataset.info['pdf-reader-other'];
   }
 

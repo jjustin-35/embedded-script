@@ -1,32 +1,29 @@
-import { Field } from 'redux-form';
-import { Element } from 'react-scroll';
+import React from "react";
 
-import { TFunctionType } from '../../../constants/types';
-import { DataType } from '../../../containers/Footer/klaviyo/data';
+import { TFunctionType } from "../../../constants/types";
+import { DataType } from "../../../containers/Footer/klaviyo/data";
 
-import Button from '../../Button';
-import RenderField from './field';
+import Button from "../../Button";
+import Field from "./field";
 
-import { Wrapper } from './styled';
+import { Wrapper } from "./styled";
 
 interface Props {
-  handleSubmit: any;
-  onFormClick: (formData: any) => void;
+  handleSubmit: React.FormEventHandler<HTMLFormElement>;
   data: DataType;
   t: TFunctionType;
 }
 
-const RenderForm = ({ handleSubmit, onFormClick, data, t }: Props) => (
-  <Element name="klaviyoElement">
-    <Wrapper>
-      <form onSubmit={handleSubmit(onFormClick)}>
-        <Field name="email" placeholder={t(data.placeholder)} component={RenderField} />
-        <Button id="form-btn-klaviyo" {...data.btn} fullWidth>
-          {t(data.btn.text)}
-        </Button>
-      </form>
-    </Wrapper>
-  </Element>
+const Form = ({ handleSubmit, data, t }: Props) => (
+  <Wrapper>
+    <form onSubmit={handleSubmit}>
+      <Field
+        name="email"
+        placeholder={t(data.placeholder)}
+      />
+      <Button id="form-btn-klaviyo" {...data.btn} />
+    </form>
+  </Wrapper>
 );
 
-export default RenderForm;
+export default Form;

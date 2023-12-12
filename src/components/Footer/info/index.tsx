@@ -1,7 +1,6 @@
-import { TFunctionType } from '@/constants/types/global';
+import { TFunctionType } from '../../../constants/types';
 import { InfoMenuType } from '../data';
 
-import LinkWrapper from 'components/link';
 import { InfoWrapper, InfoBlocks, Title, List, Divider } from './styled';
 
 interface Props {
@@ -26,14 +25,13 @@ const Info = ({ t, data, handleClick, activeItem, isNotEnAndJa }: Props) => {
 
               if (isHidden) return null;
               return (
-                <LinkWrapper
+                <a
                   href={t(`link:${linkItem.href}`, { ...(linkItem.localeParam && linkItem.localeParam) })}
-                  isExternal={linkItem.isExternal}
                   target={linkItem.target || '_self'}
                   key={`footer_link_${linkItem.text}`}
                 >
                   {t(linkItem.text)}
-                </LinkWrapper>
+                </a>
               );
             })}
           </List>

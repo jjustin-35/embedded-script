@@ -1,4 +1,4 @@
-import { TFunctionType } from '@/constants/types/global';
+import { TFunctionType } from '../../../constants/types';
 
 import Wrapper from './styled';
 import data from '../data';

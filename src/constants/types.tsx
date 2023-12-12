@@ -26,14 +26,7 @@ export type ButtonColorType = {
 
 export type ButtonThemeType =
   | 'default'
-  | 'kdan_office_contact'
-  | 'kdan_office_cta'
-  | 'kdan_office_free_trial'
-  | 'kdan_office_cta_transparent'
-  | 'pdf_blue'
-  | 'pdf_blue_transparent'
-  | 'custom'
-  | 'custom_transparent';
+  | 'klaviyo'
 
 export type ButtonStyleType = {
   btnTheme?: ButtonThemeType;

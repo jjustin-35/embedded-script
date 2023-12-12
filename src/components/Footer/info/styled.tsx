@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-import { device } from '@/constants/commonStyle';
+import { device } from '../../../constants/commonStyle';
 
 type TitleType = {
   opened: boolean;

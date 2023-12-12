@@ -1,6 +1,5 @@
 import configs from "../../config";
-import { ImageType } from "../../constants/types";
-import { ButtonComponentType } from "../../components/Button";
+import { ImageType, ButtonType } from "../../constants/types";
 
 import logoMarkImg from "../../images/company/img-logomark.svg";
 import productIcon from "../../images/menu/icon-products.svg";
@@ -8,8 +7,15 @@ import solutionIcon from "../../images/menu/icon-solutions.svg";
 import companyIcon from "../../images/menu/icon-company.svg";
 import supportIcon from "../../images/menu/icon-support.svg";
 
-const { KDAN_WEBSITE, CREATIVE_STORE, DOTTEDSIGN, KDAN_CLOUD, MARK_UP, INSPOD, ADNEX } =
-  configs;
+const {
+  KDAN_WEBSITE,
+  CREATIVE_STORE,
+  DOTTEDSIGN,
+  KDAN_CLOUD,
+  MARK_UP,
+  INSPOD,
+  ADNEX,
+} = configs;
 
 type LinkType = {
   href: string;
@@ -60,7 +66,7 @@ export type BtnsType =
 export type DataType = {
   logo: ImageType;
   menus: MenuType[];
-  btns: Record<BtnsType, ButtonComponentType & LinkType>;
+  btns: Record<BtnsType, ButtonType & LinkType>;
 };
 
 const data: DataType = {

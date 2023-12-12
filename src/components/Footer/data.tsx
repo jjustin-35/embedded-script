@@ -47,6 +47,7 @@ export type DataType = {
 };
 
 const {
+  KDAN_WEBSITE,
   CREATIVE_STORE,
   CREATIVE_STORE_CN,
   DOTTEDSIGN,
@@ -107,27 +108,27 @@ const data: DataType = {
         items: [
           {
             text: "About Us",
-            href: "/aboutus",
+            href: `${KDAN_WEBSITE}/aboutus`,
           },
           {
             text: "Leadership",
-            href: "/leadership",
+            href: `${KDAN_WEBSITE}/leadership`,
           },
           {
             text: "Career",
-            href: "/career",
+            href: `${KDAN_WEBSITE}/career`,
           },
           {
             text: "Contact Us",
-            href: "/contact",
+            href: `${KDAN_WEBSITE}/contact`,
           },
           {
             text: "Press Center",
-            href: "/press",
+            href: `${KDAN_WEBSITE}/press`,
           },
           {
             text: "gdpr-page",
-            href: "/trust/gdpr",
+            href: `${KDAN_WEBSITE}/trust/gdpr`,
           },
         ],
       },

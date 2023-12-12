@@ -3,7 +3,7 @@ import LangSelect from "../../containers/LangSelect";
 import { LangBarWrapper, UpperLink, LinkGroup } from "./styled";
 import { footerLinks } from "./data";
 
-const langBar = ({ t, noLang, copyright, isCampaign }) => (
+const langBar = ({ t }) => (
   <LangBarWrapper>
     <UpperLink>
       <LinkGroup>
@@ -15,13 +15,9 @@ const langBar = ({ t, noLang, copyright, isCampaign }) => (
           );
         })}
       </LinkGroup>
-      {!noLang && <LangSelect isCampaign={isCampaign} />}
+      <LangSelect />
     </UpperLink>
-    {copyright ? (
-      <p dangerouslySetInnerHTML={{ __html: copyright }} />
-    ) : (
-      <p>{`© 2009-${new Date().getFullYear()} Kdan Mobile Software Ltd. All Rights Reserved.`}</p>
-    )}
+    <p>{`© 2009-${new Date().getFullYear()} Kdan Mobile Software Ltd. All Rights Reserved.`}</p>
   </LangBarWrapper>
 );
 

@@ -9,9 +9,7 @@ const data: DataType = {
   placeholder: 'klaviyo-placeholder',
 
   btn: {
-    color: 'N100',
-    backgroundColor: '#ffffff',
-    variant: 'contained',
+    btnTheme: 'klaviyo',
     text: 'klaviyo-btn',
     size: 'medium',
   },
