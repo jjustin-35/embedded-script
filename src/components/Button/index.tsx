@@ -1,16 +1,8 @@
-import React, { MouseEvent } from "react";
+import React from "react";
 
-import { TFunctionType } from "../../constants/types";
-import { ButtonStyleType } from "./styled";
+import { ButtonType } from "../../constants/types";
 
 import { Wrapper } from "./styled";
-
-export type ButtonComponentType = ButtonStyleType & {
-  text: string;
-  id?: string;
-  onClick?: (e?: MouseEvent | MouseEvent) => void;
-  t?: TFunctionType;
-};
 
 const Button = ({
   text,
@@ -22,7 +14,7 @@ const Button = ({
   isDisabled = false,
   onClick,
   t,
-}: ButtonComponentType) => {
+}: ButtonType) => {
   const btnText = t ? t(text) : text;
   return (
     <Wrapper
