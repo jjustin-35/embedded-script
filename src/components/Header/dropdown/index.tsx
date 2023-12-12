@@ -7,6 +7,8 @@ import DropdownComponent from "./component";
 import { DropdownOuter, DropdownWrapper, DropdownInner } from "./styled";
 import { ItemWrapper, ArrowIcon } from "../styled";
 
+import downArrowIcon from "../../../images/icons/ic-down-arrow.svg";
+
 interface Props {
   data: MenuType;
   t: TFunctionType;
@@ -23,7 +25,7 @@ const Trigger = ({ text, isOpen }: TriggerType) => (
   <ItemWrapper>
     {text}
     <ArrowIcon
-      src="/images/icons/ic-down-arrow.svg"
+      src={downArrowIcon}
       alt="ic-down-arrow"
       isOpen={isOpen}
     />

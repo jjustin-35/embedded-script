@@ -4,7 +4,7 @@ let DATA_CENTER = 'https://data-center-rails.kdanmobile.com';
 let LICENSE_CENTER = 'https://license-center.kdanmobile.com';
 let MAIL_CENTER = 'https://mail-center.kdanmobile.com';
 let CMS_SERVER = 'https://cms.kdanmobile.com';
-let HOST = 'https://www.kdanmobile.com';
+let KDAN_WEBSITE = 'https://www.kdanmobile.com';
 let HOSTNAME = 'www.kdanmobile.com';
 let CREATIVE_STORE = 'https://creativestore.kdanmobile.com';
 let CREATIVE_STORE_CN = 'https://creativestore.kdan.cn';
@@ -30,7 +30,7 @@ export default {
   MAIL_CENTER,
   MEMBER_CENTER,
   CMS_SERVER,
-  HOST,
+  KDAN_WEBSITE,
   HOSTNAME,
   CREATIVE_STORE,
   CREATIVE_STORE_CN,

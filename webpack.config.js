@@ -50,7 +50,7 @@ module.exports = {
             options: {
               context: "",
               emitFile: true,
-              name: "/public/**/[path][name].[hash].[ext]",
+              name: "images/[path][name].[hash].[ext]",
             },
           },
         ],
