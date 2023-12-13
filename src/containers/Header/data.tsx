@@ -1,12 +1,6 @@
 import configs from "../../config";
 import { ImageType, ButtonType } from "../../constants/types";
 
-import logoMarkImg from "../../images/company/img-logomark.svg";
-import productIcon from "../../images/menu/icon-products.svg";
-import solutionIcon from "../../images/menu/icon-solutions.svg";
-import companyIcon from "../../images/menu/icon-company.svg";
-import supportIcon from "../../images/menu/icon-support.svg";
-
 const {
   KDAN_WEBSITE,
   CREATIVE_STORE,
@@ -71,7 +65,7 @@ export type DataType = {
 
 const data: DataType = {
   logo: {
-    src: logoMarkImg,
+    src: "/images/company/img-logomark.svg",
     alt: "kdan-mobile-logo",
   },
 
@@ -80,7 +74,7 @@ const data: DataType = {
       text: "Products",
       key: "nav-products",
       images: {
-        src: productIcon,
+        src: "/images/menu/icon-products.svg",
         alt: "ic-products",
       },
       cols: [
@@ -200,7 +194,7 @@ const data: DataType = {
       text: "Solutions",
       key: "nav-solutions",
       images: {
-        src: solutionIcon,
+        src: "/images/menu/icon-solutions.svg",
         alt: "ic-solutions",
       },
       cols: [
@@ -273,7 +267,7 @@ const data: DataType = {
       text: "Company",
       key: "nav-company",
       images: {
-        src: companyIcon,
+        src: "/images/menu/icon-company.svg",
         alt: "ic-company",
       },
       cols: [
@@ -326,7 +320,7 @@ const data: DataType = {
       text: "Support",
       key: "nav-support",
       images: {
-        src: supportIcon,
+        src: "/images/menu/icon-support.svg",
         alt: "ic-support",
       },
       cols: [

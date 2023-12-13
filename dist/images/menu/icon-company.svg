@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="27px" viewBox="0 0 25 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/company</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="30" height="30"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首頁元件狀態" transform="translate(-1754.000000, -573.000000)">
+            <g id="Group-59-Copy-2" transform="translate(1714.000000, 523.000000)">
+                <g id="Group-2" transform="translate(40.000000, 47.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <g mask="url(#mask-2)">
+                        <g transform="translate(-5.000000, 3.000000)">
+                            <circle id="Oval-Copy-6" fill="#D8D8D8" cx="22.499993" cy="6.5" r="6.5"></circle>
+                            <path d="M5.06417726,25.9999803 C4.05247237,25.9992626 3.03231617,25.9971848 1.99991954,25.9932571 C1.99991954,18.8174307 7.82021779,13.0002741 14.9999195,13.0002741 C22.1796213,13.0002741 27.9999195,18.8174307 27.9999195,25.9932571 C25.6819218,25.9766465 23.4529013,25.9703455 21.2772145,25.9697465 C21.1258022,22.2399095 18.053409,19.2634138 14.2858179,19.2634138 C10.5081171,19.2634138 7.42934996,22.255905 7.29069326,25.9997106 Z" id="Combined-Shape" fill="#FFCB31" transform="translate(14.999920, 19.500127) rotate(-150.000000) translate(-14.999920, -19.500127) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

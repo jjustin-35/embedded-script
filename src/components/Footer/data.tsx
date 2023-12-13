@@ -1,11 +1,5 @@
 import config from "../../config";
 
-import btnFBIcon from "../../images/footer/btn_fb01.svg";
-import btnTwitterIcon from "../../images/footer/btn_twitter01.svg";
-import btnLinkedinIcon from "../../images/footer/btn_in01.svg";
-import btnYoutubeIcon from "../../images/footer/btn_youtube01.svg";
-import btnWeiBoIcon from "../../images/footer/btn_weibo01.svg";
-
 type MediaItemType = {
   name: string;
   imgSrc: string;
@@ -73,27 +67,27 @@ const data: DataType = {
     media: [
       {
         name: "facebook",
-        imgSrc: btnFBIcon,
+        imgSrc: "/images/footer/btn_fb01.svg",
         linkSrc: "social-media-facebook-link",
       },
       {
         name: "twitter",
-        imgSrc: btnTwitterIcon,
+        imgSrc: "/images/footer/btn_twitter01.svg",
         linkSrc: "social-media-twitter-link",
       },
       {
         name: "linkedin",
-        imgSrc: btnLinkedinIcon,
+        imgSrc: "/images/footer/btn_in01.svg",
         linkSrc: "social-media-linkedin-link",
       },
       {
         name: "youtube",
-        imgSrc: btnYoutubeIcon,
+        imgSrc: "/images/footer/btn_youtube01.svg",
         linkSrc: "social-media-youtube-link",
       },
       {
         name: "weibo",
-        imgSrc: btnWeiBoIcon,
+        imgSrc: "/images/footer/btn_weibo01.svg",
         linkSrc: "social-media-weibo-link",
       },
     ],

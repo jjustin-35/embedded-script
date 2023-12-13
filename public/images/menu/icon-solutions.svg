@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/solutions</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首頁元件狀態" transform="translate(-1066.000000, -572.000000)">
+            <g id="Group-59" transform="translate(1023.000000, 523.000000)">
+                <g id="Group" transform="translate(40.000000, 47.000000)">
+                    <g id="Group-Copy" transform="translate(3.000000, 2.947673)">
+                        <circle id="Oval-Copy-2" fill="#D8D8D8" cx="6.5" cy="17.5523268" r="6.5"></circle>
+                        <path d="M7.684304,0 L24.0133355,0 C24.2894779,-5.07265313e-17 24.5133355,0.223857625 24.5133355,0.5 C24.5133355,0.519096548 24.5122415,0.538177413 24.5100588,0.557148812 L22.6313775,16.8861803 C22.599815,17.160513 22.3518381,17.3573172 22.0775054,17.3257548 C21.9549658,17.3116564 21.8419621,17.2527603 21.7602178,17.1603884 L7.30986761,0.831356886 C7.12686425,0.624561375 7.14615161,0.308566959 7.35294712,0.125563604 C7.44436735,0.0446614133 7.56222688,-3.66152855e-16 7.684304,0 Z" id="Path-4" fill="#5A6EED"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { TFunctionType } from "../../constants/types";
 
-import selectImgIcon from "../../images/icons/ic-black-arrow-down.svg"
-
 import {
   InputWrapper,
   Label,
@@ -47,7 +45,7 @@ interface Props {
 }
 
 const selectIcon = {
-  src: selectImgIcon,
+  src: "/images/icons/ic-black-arrow-down.svg",
   alt: "ic-down",
 };
 
