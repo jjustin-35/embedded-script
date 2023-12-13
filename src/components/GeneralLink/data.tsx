@@ -1,8 +1,6 @@
-import rightArrowIcon from '../../images/icons/ic-right-arrow.svg';
-
 export default {
   'arrow-link': {
-    src: rightArrowIcon,
+    src: "images/icons/ic-right-arrow.svg",
     alt: 'ic-arrow-right',
   },
 };

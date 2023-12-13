@@ -65,7 +65,7 @@ export type DataType = {
 
 const data: DataType = {
   logo: {
-    src: "/images/company/img-logomark.svg",
+    src: "images/company/img-logomark.svg",
     alt: "kdan-mobile-logo",
   },
 
@@ -74,7 +74,7 @@ const data: DataType = {
       text: "Products",
       key: "nav-products",
       images: {
-        src: "/images/menu/icon-products.svg",
+        src: "images/menu/icon-products.svg",
         alt: "ic-products",
       },
       cols: [
@@ -194,7 +194,7 @@ const data: DataType = {
       text: "Solutions",
       key: "nav-solutions",
       images: {
-        src: "/images/menu/icon-solutions.svg",
+        src: "images/menu/icon-solutions.svg",
         alt: "ic-solutions",
       },
       cols: [
@@ -267,7 +267,7 @@ const data: DataType = {
       text: "Company",
       key: "nav-company",
       images: {
-        src: "/images/menu/icon-company.svg",
+        src: "images/menu/icon-company.svg",
         alt: "ic-company",
       },
       cols: [
@@ -320,7 +320,7 @@ const data: DataType = {
       text: "Support",
       key: "nav-support",
       images: {
-        src: "/images/menu/icon-support.svg",
+        src: "images/menu/icon-support.svg",
         alt: "ic-support",
       },
       cols: [

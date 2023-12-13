@@ -7,14 +7,15 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
+    clean: true,
   },
   target: "web",
   devServer: {
-      port: "9500",
-      static: ["./dist"],
-      open: true,
-      hot: true ,
-      liveReload: true
+    port: "9500",
+    static: ["./dist"],
+    open: true,
+    hot: true,
+    liveReload: true,
   },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
@@ -50,5 +51,5 @@ module.exports = {
         },
       ],
     }),
-  ]
+  ],
 };

@@ -45,7 +45,7 @@ interface Props {
 }
 
 const selectIcon = {
-  src: "/images/icons/ic-black-arrow-down.svg",
+  src: "images/icons/ic-black-arrow-down.svg",
   alt: "ic-down",
 };
 

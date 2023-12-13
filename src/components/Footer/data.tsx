@@ -67,27 +67,27 @@ const data: DataType = {
     media: [
       {
         name: "facebook",
-        imgSrc: "/images/footer/btn_fb01.svg",
+        imgSrc: "images/footer/btn_fb01.svg",
         linkSrc: "social-media-facebook-link",
       },
       {
         name: "twitter",
-        imgSrc: "/images/footer/btn_twitter01.svg",
+        imgSrc: "images/footer/btn_twitter01.svg",
         linkSrc: "social-media-twitter-link",
       },
       {
         name: "linkedin",
-        imgSrc: "/images/footer/btn_in01.svg",
+        imgSrc: "images/footer/btn_in01.svg",
         linkSrc: "social-media-linkedin-link",
       },
       {
         name: "youtube",
-        imgSrc: "/images/footer/btn_youtube01.svg",
+        imgSrc: "images/footer/btn_youtube01.svg",
         linkSrc: "social-media-youtube-link",
       },
       {
         name: "weibo",
-        imgSrc: "/images/footer/btn_weibo01.svg",
+        imgSrc: "images/footer/btn_weibo01.svg",
         linkSrc: "social-media-weibo-link",
       },
     ],

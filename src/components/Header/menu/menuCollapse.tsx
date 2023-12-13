@@ -20,7 +20,7 @@ interface TriggerType {
 const Trigger = ({ text, isOpen }: TriggerType) => (
   <ItemWrapper>
     {text}
-    <ArrowIcon src="/images/icons/ic-down-arrow.svg" alt="ic-down-arrow" isOpen={isOpen} />
+    <ArrowIcon src="images/icons/ic-down-arrow.svg" alt="ic-down-arrow" isOpen={isOpen} />
   </ItemWrapper>
 );
 
