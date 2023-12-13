@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import { colors as commonColors } from '../../constants/commonStyle';
+import styled, { css } from "styled-components";
+import { colors as commonColors } from "../../constants/commonStyle";
 
 type LabelProps = {
   isDisabled?: boolean;
@@ -22,26 +22,28 @@ type OptionProps = {
 
 type SelectIconProps = {
   isOpen: boolean;
+  isReverse?: boolean;
 };
 
 const colors = {
   common: {
-    border: '#969696',
-    checkboxBorder: '#7d7d7d',
-    active: '#007aff',
-    disabled: '#c8c8c8',
-    placeholder: '#c8c8c8',
-    disabledBackground: '#e1e1e1',
-    normal: '#000000',
-    error: '#f25858',
+    border: "#969696",
+    checkboxBorder: "#7d7d7d",
+    active: "#007aff",
+    disabled: "#c8c8c8",
+    placeholder: "#c8c8c8",
+    disabledBackground: "#e1e1e1",
+    normal: "#000000",
+    error: "#f25858",
   },
 };
 
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: fit-content;
   position: relative;
+  min-width: 164px;
 `;
 
 export const Label = styled.label<LabelProps>`
@@ -71,10 +73,7 @@ export const ErrorMessage = styled.p`
 
 export const HiddenInput = styled.input`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   margin: 0;
   padding: 0;
   opacity: 0;
@@ -90,6 +89,8 @@ export const SelectWrapper = styled.div<SelectWrapperProps>`
   padding: 12px;
   border-radius: 4px;
   cursor: pointer;
+  background-color: #ffffff;
+  color: ${colors.common.normal};
 
   ${({ isActive, variant }) =>
     isActive
@@ -105,7 +106,8 @@ export const SelectWrapper = styled.div<SelectWrapperProps>`
     css`
       border-color: ${colors[variant]?.disabled || colors.common.disabled};
       color: ${colors[variant]?.disabled || colors.common.disabled};
-      background-color: ${colors[variant]?.disabledBackground || colors.common.disabledBackground};
+      background-color: ${colors[variant]?.disabledBackground ||
+      colors.common.disabledBackground};
     `}
 `;
 
@@ -119,11 +121,22 @@ export const SelectIcon = styled.img<SelectIconProps>`
   height: 20px;
   transition: transform 0.1s linear;
 
-  ${({ isOpen }) =>
-    isOpen &&
+  ${({ isReverse }) =>
+    isReverse &&
     css`
       transform: rotate(180deg);
     `}
+
+  ${({ isOpen, isReverse }) =>
+    (isOpen &&
+      isReverse &&
+      css`
+        transform: rotate(0deg);
+      `) ||
+    (isOpen &&
+      css`
+        transform: rotate(180deg);
+      `)}
 `;
 
 export const SelectMenu = styled.div<SelectMenuProps>`
@@ -148,6 +161,7 @@ export const Option = styled.div<OptionProps>`
   padding: 12px 20px;
   font-size: 14px;
   cursor: pointer;
+  color: ${colors.common.normal};
 
   :hover {
     background-color: ${colors.common.disabledBackground};

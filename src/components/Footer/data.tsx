@@ -1,5 +1,11 @@
 import config from "../../config";
 
+import btnFBIcon from "../../images/footer/btn_fb01.svg";
+import btnTwitterIcon from "../../images/footer/btn_twitter01.svg";
+import btnLinkedinIcon from "../../images/footer/btn_in01.svg";
+import btnYoutubeIcon from "../../images/footer/btn_youtube01.svg";
+import btnWeiBoIcon from "../../images/footer/btn_weibo01.svg";
+
 type MediaItemType = {
   name: string;
   imgSrc: string;
@@ -36,8 +42,6 @@ export type InfoMenuType = {
 
 type InfoType = {
   normal: InfoMenuType[];
-  "pdf-reader": InfoMenuType[];
-  "pdf-reader-other": InfoMenuType[];
 };
 
 export type DataType = {
@@ -59,6 +63,7 @@ const {
   ANIZONE_CN,
   INSPOD,
   ADNEX,
+  SUPPORT_CENTER,
 } = config;
 
 const data: DataType = {
@@ -68,27 +73,27 @@ const data: DataType = {
     media: [
       {
         name: "facebook",
-        imgSrc: "/images/footer/btn_fb01.svg",
+        imgSrc: btnFBIcon,
         linkSrc: "social-media-facebook-link",
       },
       {
         name: "twitter",
-        imgSrc: "/images/footer/btn_twitter01.svg",
+        imgSrc: btnTwitterIcon,
         linkSrc: "social-media-twitter-link",
       },
       {
         name: "linkedin",
-        imgSrc: "/images/footer/btn_in01.svg",
+        imgSrc: btnLinkedinIcon,
         linkSrc: "social-media-linkedin-link",
       },
       {
         name: "youtube",
-        imgSrc: "/images/footer/btn_youtube01.svg",
+        imgSrc: btnYoutubeIcon,
         linkSrc: "social-media-youtube-link",
       },
       {
         name: "weibo",
-        imgSrc: "/images/footer/btn_weibo01.svg",
+        imgSrc: btnWeiBoIcon,
         linkSrc: "social-media-weibo-link",
       },
     ],
@@ -138,7 +143,7 @@ const data: DataType = {
         items: [
           {
             text: "Animation Desk",
-            href: "/animation-desk",
+            href: `${KDAN_WEBSITE}/animation-desk`,
           },
           {
             text: "Markup",
@@ -151,15 +156,15 @@ const data: DataType = {
           },
           {
             text: "NoteLedge",
-            href: "/noteledge",
+            href: `${KDAN_WEBSITE}/noteledge`,
           },
           {
             text: "Write-on Video",
-            href: "/writeon-video",
+            href: `${KDAN_WEBSITE}/writeon-video`,
           },
           {
             text: "Inspod",
-            href: "inspod-link",
+            href: INSPOD,
             isExternal: true,
             rel: "noreferrer noopener",
             localeParam: {
@@ -168,7 +173,7 @@ const data: DataType = {
           },
           {
             text: "AniZone",
-            href: "community-anizone-link",
+            href: ANIZONE,
             isExternal: true,
             rel: "noreferrer noopener",
             localeParam: {
@@ -184,27 +189,27 @@ const data: DataType = {
         items: [
           {
             text: "PDF Reader",
-            href: "/pdf-reader",
+            href: `${KDAN_WEBSITE}/pdf-reader`,
           },
           {
             text: "Kdan Office",
-            href: "/kdan-office",
+            href: `${KDAN_WEBSITE}/kdan-office`,
           },
           {
             text: "Pocket Scanner",
-            href: "/pocket-scanner",
+            href: `${KDAN_WEBSITE}/pocket-scanner`,
           },
           {
             text: "title-sdk",
-            href: "/pdf-sdk",
+            href: `${KDAN_WEBSITE}/pdf-sdk`,
           },
           {
             text: "PDF Converter SDK",
-            href: "/pdf-converter-sdk",
+            href: `${KDAN_WEBSITE}/pdf-converter-sdk`,
           },
           {
             text: "PDF Templates",
-            href: "/pdf-templates",
+            href: `${KDAN_WEBSITE}/pdf-templates`,
             isTemplate: true,
             id: "BtnClick_Explore_PDFtemplates",
           },
@@ -216,7 +221,7 @@ const data: DataType = {
         items: [
           {
             text: "DottedSign",
-            href: "dottedsign-link",
+            href: DOTTEDSIGN,
             isExternal: true,
             rel: "noreferrer noopener",
             localeParam: {
@@ -226,7 +231,7 @@ const data: DataType = {
           },
           {
             text: "DottedSignAPI",
-            href: "/esignature-api",
+            href: `${KDAN_WEBSITE}/esignature-api`,
           },
         ],
       },
@@ -236,7 +241,7 @@ const data: DataType = {
         items: [
           {
             text: "bus-1-title",
-            href: "/esign-digital-transformation",
+            href: `${KDAN_WEBSITE}/esign-digital-transformation`,
           },
           {
             text: "bus-4-title",
@@ -248,11 +253,11 @@ const data: DataType = {
           },
           {
             text: "bus-3-title",
-            href: "/document-ai-solution",
+            href: `${KDAN_WEBSITE}/document-ai-solution`,
           },
           {
             text: "bus-2-title",
-            href: "/creative-solution",
+            href: `${KDAN_WEBSITE}/creative-solution`,
           },
         ],
       },
@@ -262,13 +267,13 @@ const data: DataType = {
         items: [
           {
             text: "Kdan Blog",
-            href: "blog-link",
+            href: "",
             isExternal: true,
             rel: "noreferrer noopener",
           },
           {
             text: "Kdan Cloud",
-            href: "kdan-cloud-link",
+            href: KDAN_CLOUD,
             isExternal: true,
             rel: "noreferrer noopener",
             localeParam: {
@@ -278,418 +283,23 @@ const data: DataType = {
           },
           {
             text: "FAQ",
-            href: "support-link",
+            href: SUPPORT_CENTER,
             isExternal: true,
             rel: "noreferrer noopener",
           },
           {
             text: "All Products & Services",
-            href: "/products",
+            href: `${KDAN_WEBSITE}/products`,
           },
           {
             text: "All Plans & Pricing",
-            href: "creativestore-link",
+            href: CREATIVE_STORE,
             isExternal: true,
             rel: "noreferrer noopener",
             localeParam: {
               CREATIVE_STORE,
               CREATIVE_STORE_CN,
             },
-          },
-        ],
-      },
-    ],
-    "pdf-reader": [
-      {
-        id: "pdf-reader",
-        title: "PDF Reader",
-        items: [
-          {
-            text: "title-desktop",
-            href: "/pdf-reader",
-          },
-          {
-            text: "title-mobile",
-            href: "/pdf-reader-app",
-          },
-          {
-            text: "Document 365",
-            href: "pdf-document365-individual-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              CREATIVE_STORE,
-              CREATIVE_STORE_CN,
-            },
-          },
-          {
-            text: "PDF Education",
-            href: "/pdf-reader/education",
-          },
-          {
-            text: "title-sdk",
-            href: "/pdf-sdk",
-          },
-          {
-            text: "PDF Converter SDK",
-            href: "/pdf-converter-sdk",
-          },
-          {
-            text: "PDF Templates",
-            href: "/pdf-templates",
-            isTemplate: true,
-            id: "BtnClick_Explore_PDFtemplates",
-          },
-        ],
-      },
-      {
-        id: "sign-and-secure",
-        title: "Sign & Secure",
-        items: [
-          {
-            text: "Sign PDF",
-            href: "/pdf-reader/sign-pdf",
-          },
-          {
-            text: "Assign Signers",
-            href: "dottedsign-product-tour-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              DOTTEDSIGN,
-              DOTTEDSIGN_CN,
-            },
-          },
-          {
-            text: "Encrypt PDF",
-            href: "/pdf-reader/how-to-encrypt-a-pdf",
-          },
-          {
-            text: "Unlock PDF",
-            href: "/pdf-reader/unlock-pdf",
-          },
-        ],
-      },
-      {
-        id: "edit-and-convert",
-        title: "Edit & Convert",
-        items: [
-          {
-            text: "Edit PDF",
-            href: "/pdf-reader/edit-pdf",
-          },
-          {
-            text: "Convert to PDF",
-            href: "/pdf-reader/convert-to-pdf",
-          },
-          {
-            text: "Merge PDFs",
-            href: "/pdf-reader/merge-pdf",
-          },
-          {
-            text: "Split PDF",
-            href: "/pdf-reader/split-pdf",
-          },
-          {
-            text: "Compress PDF",
-            href: "/pdf-reader/compress-pdf",
-          },
-          {
-            text: "Image to PDF",
-            href: "/pdf-reader/convert-image-to-pdf",
-          },
-        ],
-      },
-      {
-        id: "view-and-annotate",
-        title: "View & Annotate",
-        items: [
-          {
-            text: "Annotate PDF",
-            href: "/pdf-reader/annotate-pdf",
-          },
-          {
-            text: "Highlight PDF",
-            href: "/pdf-reader/highlight-pdf",
-          },
-          {
-            text: "Write on PDF",
-            href: "/pdf-reader/write-on-pdf",
-          },
-          {
-            text: "Fill in PDF",
-            href: "/pdf-reader/fill-in-pdf",
-          },
-          {
-            text: "Search PDF",
-            href: "/pdf-reader/search-pdf",
-          },
-          {
-            text: "Slideshow Mode",
-            href: "/pdf-reader/pdf-slideshow",
-          },
-        ],
-      },
-      {
-        id: "manage-files-and-pages",
-        title: "Manage Files & Pages",
-        items: [
-          {
-            text: "Rotate PDF",
-            href: "/pdf-reader/rotate-pdf",
-          },
-          {
-            text: "Rearrange PDF",
-            href: "/pdf-reader/rearrange-pdf-pages",
-          },
-          {
-            text: "Add Pages to PDF",
-            href: "/pdf-reader/add-pages-to-pdf",
-          },
-          {
-            text: "Delete PDF Pages",
-            href: "/pdf-reader/delete-pages-from-pdf",
-          },
-          {
-            text: "Add Image to PDF",
-            href: "/pdf-reader/add-image-to-pdf",
-          },
-          {
-            text: "Add hyperlink to PDF",
-            href: "/pdf-reader/add-hyperlink-to-pdf",
-          },
-          {
-            text: "Create PDF",
-            href: "/pdf-reader/create-pdf",
-          },
-        ],
-      },
-      {
-        id: "license",
-        title: "License",
-        items: [
-          {
-            text: "Buy Software",
-            href: "/pdf-reader/license",
-          },
-          {
-            text: "License Retrieval",
-            href: "/pdf-reader/retrieve-license",
-          },
-        ],
-      },
-      {
-        id: "kdan",
-        title: "Kdan Mobile",
-        items: [
-          {
-            text: "About Us",
-            href: "/aboutus",
-          },
-          {
-            text: "Blog",
-            href: "blog-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
-          },
-          {
-            text: "Press Center",
-            href: "/press",
-          },
-          {
-            text: "gdpr-page",
-            href: "/trust/gdpr",
-          },
-          {
-            text: "Kdan Cloud",
-            href: "kdan-cloud-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              KDAN_CLOUD,
-              KDAN_CLOUD_CN,
-            },
-          },
-          {
-            text: "Creative Store",
-            href: "creativestore-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              CREATIVE_STORE,
-              CREATIVE_STORE_CN,
-            },
-          },
-          {
-            text: "Contact Us",
-            href: "/contact",
-          },
-          {
-            text: "FAQ",
-            href: "support-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
-          },
-        ],
-      },
-    ],
-    "pdf-reader-other": [
-      {
-        id: "pdf-reader",
-        title: "PDF Reader",
-        items: [
-          {
-            text: "title-desktop",
-            href: "/pdf-reader",
-          },
-          {
-            text: "title-mobile",
-            href: "/pdf-reader-app",
-          },
-          {
-            text: "PDF Education",
-            href: "/pdf-reader/education",
-          },
-          {
-            text: "PDF Templates",
-            href: "/pdf-templates",
-            isTemplate: true,
-            id: "BtnClick_Explore_PDFtemplates",
-          },
-        ],
-      },
-      {
-        id: "document-365",
-        title: "Document 365",
-        items: [
-          {
-            text: "Individual",
-            href: "pdf-document365-individual-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              CREATIVE_STORE,
-              CREATIVE_STORE_CN,
-            },
-          },
-          {
-            text: "Business",
-            href: "pdf-document365-business-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              CREATIVE_STORE,
-              CREATIVE_STORE_CN,
-            },
-          },
-          {
-            text: "title-sdk",
-            href: "/pdf-sdk",
-          },
-          {
-            text: "PDF Converter SDK",
-            href: "/pdf-converter-sdk",
-          },
-        ],
-      },
-      {
-        id: "how-to",
-        title: "subMenu-how-to",
-        items: [
-          {
-            text: "Sign PDF",
-            href: "/pdf-reader/sign-pdf",
-          },
-          {
-            text: "Merge PDFs",
-            href: "/pdf-reader/merge-pdf",
-          },
-          {
-            text: "Edit PDF",
-            href: "/pdf-reader/edit-pdf",
-          },
-          {
-            text: "Encrypt PDF",
-            href: "/pdf-reader/how-to-encrypt-a-pdf",
-          },
-          {
-            text: "Convert to PDF",
-            href: "/pdf-reader/convert-to-pdf",
-          },
-          {
-            text: "Split PDF",
-            href: "/pdf-reader/split-pdf",
-          },
-        ],
-      },
-      {
-        id: "license",
-        title: "License",
-        items: [
-          {
-            text: "Buy Software",
-            href: "/pdf-reader/license",
-          },
-          {
-            text: "License Retrieval",
-            href: "/pdf-reader/retrieve-license",
-          },
-          {
-            text: "Dealer",
-            href: "dealer-link",
-            isExternal: true,
-            target: "_blank",
-            rel: "noreferrer noopener",
-          },
-        ],
-      },
-      {
-        id: "kdan",
-        title: "Kdan Mobile",
-        items: [
-          {
-            text: "About Us",
-            href: "/aboutus",
-          },
-          {
-            text: "Blog",
-            href: "blog-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
-          },
-          {
-            text: "Press Center",
-            href: "/press",
-          },
-          {
-            text: "Kdan Cloud",
-            href: "kdan-cloud-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              KDAN_CLOUD,
-              KDAN_CLOUD_CN,
-            },
-          },
-          {
-            text: "Creative Store",
-            href: "creativestore-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              CREATIVE_STORE,
-              CREATIVE_STORE_CN,
-            },
-          },
-          {
-            text: "Contact Us",
-            href: "/contact",
-          },
-          {
-            text: "FAQ",
-            href: "support-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
           },
         ],
       },
