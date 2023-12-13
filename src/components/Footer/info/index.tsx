@@ -1,17 +1,32 @@
-import { TFunctionType } from '../../../constants/types';
-import { InfoMenuType } from '../data';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import { TFunctionType, LangType } from '../../../constants/types';
+import language from '../../../constants/language';
+import langViewable from '../../../helpers/langViewable';
+import { DataType } from '../data';
 
 import { InfoWrapper, InfoBlocks, Title, List, Divider } from './styled';
 
 interface Props {
   t: TFunctionType;
-  data: InfoMenuType[];
-  handleClick: (id: string) => void;
-  activeItem: string;
-  isNotEnAndJa: boolean;
+  type: 'normal';
+  dataset: DataType;
 }
 
-const Info = ({ t, data, handleClick, activeItem, isNotEnAndJa }: Props) => {
+const Info = ({ t, type, dataset }: Props) => {
+  let data = dataset.info[type];
+  const { i18n } = useTranslation();
+
+  const lng = i18n.language as LangType;
+
+  const isNotEnAndJa = !langViewable(lng, [language.EN, language.JA]);
+
+  const [activeItem, setActiveItem] = useState<string>('');
+
+  const handleClick = (id: string) => {
+    setActiveItem(id === activeItem ? '' : id);
+  };
   return (
     <InfoWrapper>
       {data.map((el) => (

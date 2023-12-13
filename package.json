@@ -6,6 +6,7 @@
   "author": "jjustin-chen <justin.chen@kdanmobile.com>",
   "license": "MIT",
   "scripts": {
+    "start": "webpack serve --mode development --open",
     "build": "webpack ."
   },
   "devDependencies": {

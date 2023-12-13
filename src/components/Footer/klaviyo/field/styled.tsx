@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
       font-size: 14px;
     }
 
-    &:palceholder {
+    &::placeholder {
       color: #dadada;
     }
   }

@@ -1,28 +1,32 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import getLocale from "../../helpers/getLocale";
-import Select from "@kdanmobile/kdan-ui/dist/Select";
+import getPath from "../../helpers/getPath";
+import Select, { OptionType } from "../../components/Select";
 
 import { langLabels } from "./data";
 
 const langSelect = () => {
-  const [activeLang, setLang] = useState("English");
+  const [activeLang, setLang] = useState<OptionType>(langLabels[0]);
+  const { t } = useTranslation(["common"]);
   const lang = getLocale();
 
   useEffect(() => {
-    const activeItem = langLabels.filter((el) => el.key === lang);
-    setLang(activeItem[0].value);
+    const activeItem = langLabels.find((el) => el.key === lang) || langLabels[0];
+    setLang(activeItem);
   }, []);
 
-  const handleChange = (selected: { value: string; key: string }) => {
-    window.location.href = `/${selected.key}${router.asPath}`;
+  const handleChange = (item: OptionType) => {
+    const path = getPath();
+    window.location.href = `/${item.key}${path}`;
   };
 
   return (
     <Select
-      defaultValue={activeLang}
+      activeOption={activeLang}
       onChange={handleChange}
       options={langLabels}
-      position="top"
+      t={t}
     />
   );
 };

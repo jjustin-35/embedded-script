@@ -1,5 +1,6 @@
+import React from 'react';
 import { TFunctionType } from '../../../constants/types';
-import KlaviyoForm from '../klaviyo';
+import Klaviyo from '../klaviyo';
 import SocialMedia from '../socialMedia';
 
 import { Wrapper, Col, Title, Subtitle } from './styled';
@@ -13,7 +14,7 @@ const Social = ({ t }: Props) => (
     <Col>
       <Title>{t('news-title')}</Title>
       <Subtitle dangerouslySetInnerHTML={{ __html: t('news-subtitle') }} />
-      <KlaviyoForm t={t} />
+      <Klaviyo t={t} />
     </Col>
     <Col>
       <Title>{t('social-title')}</Title>

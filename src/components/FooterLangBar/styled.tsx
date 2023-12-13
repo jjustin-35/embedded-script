@@ -1,16 +1,15 @@
 import styled from 'styled-components';
-import { device } from '@/constants/commonStyle';
-import breakpoints from '@kdanmobile/kdan-ui/dist/themes/breakpoints';
+import { device } from '../../constants/commonStyle';
 
 export const LangBarWrapper = styled.div`
   width: 100%;
 
-  @media ${breakpoints.down('md')} {
+  @media screen and (${device.mobile}) {
     width: 70%;
     margin: 0 auto;
   }
 
-  @media ${breakpoints.down('sm')} {
+  @media screen and (${device.smallMobile}) {
     width: 100%;
   }
 
@@ -50,7 +49,7 @@ export const UpperLink = styled.div`
   a {
     margin: auto;
   }
-  @media ${breakpoints.down('md')} {
+  @media screen and (${device.mobile}) {
     flex-direction: column;
     margin: 0 auto 15px;
   }

@@ -1,3 +1,4 @@
+import React from 'react';
 import { TFunctionType } from '../../../constants/types';
 
 import Wrapper from './styled';

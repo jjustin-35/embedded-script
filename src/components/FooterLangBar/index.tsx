@@ -1,3 +1,4 @@
+import React from "react";
 import LangSelect from "../../containers/LangSelect";
 
 import { LangBarWrapper, UpperLink, LinkGroup } from "./styled";

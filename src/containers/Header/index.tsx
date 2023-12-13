@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { breakpoints } from '../../constants/commonStyle';
-import Header from '../../components/Header';
+import Header from '../../components/Header'
 import data from './data';
 
 const HeaderContainer = () => {
