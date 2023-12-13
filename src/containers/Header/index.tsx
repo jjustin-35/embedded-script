@@ -1,4 +1,4 @@
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import React, { useEffect, useState } from 'react';
 
 import { breakpoints } from '../../constants/commonStyle';
@@ -9,7 +9,7 @@ const HeaderContainer = () => {
   const [isScrolldown, setIsScrolldown] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = { t: (text: string) => text};
+  const { t } = useTranslation('common');
 
   const scrollHandler = () => {
     if (window.scrollY > 70) {
