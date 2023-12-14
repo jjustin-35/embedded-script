@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { PopupType } from '../../constants/types';
 
-import Popup from '../../components/popup';
+import Popup from '../../components/Popup';
 import dataset, { button } from './data';
 
 type Props = {

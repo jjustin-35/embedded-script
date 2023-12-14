@@ -1,4 +1,3 @@
-import { stringify } from "querystring";
 import { ApiMethod } from "../constants/types";
 
 const fetchApi = async (
@@ -8,12 +7,11 @@ const fetchApi = async (
   headers?: Record<string, string>
 ) => {
   if (method === "GET") {
-    const query = Object.keys(body).reduce((obj, key) => {
-      if (typeof body[key] !== "number" && !body[key]) return obj;
-      return { ...obj, [key]: body[key] };
-    }, {});
-    const queryString = stringify(query);
-    url = `${url}?${queryString}`;
+    const query = Object.keys(body).reduce((acc, key) => {
+      if (typeof body[key] !== "number" && !body[key]) return acc;
+      return `${acc}&${key}=${body[key]}`;
+    }, '');
+    url = `${url}?${query}`;
   }
 
   const resp = await fetch(url, {
