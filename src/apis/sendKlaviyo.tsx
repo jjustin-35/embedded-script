@@ -14,7 +14,7 @@ const sendKlaviyo = async (email: string) => {
         source: 'kdan_website',
         email,
         $first_name: name,
-        test_data: process?.env?.ENV !== 'production' ? 'true' : 'false',
+        test_data: false,
       },
     ],
     subscribe_type: 'subscribe',
