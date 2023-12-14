@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { TFunctionType } from "../../../constants/types";
-import { DataType } from "./data";
 import validate from "./validate";
 
 import Button from "../../Button";
@@ -15,29 +14,23 @@ interface Props {
 }
 
 const Klaviyo = ({ t }: Props) => {
-  if (!data) return;
-  // const dispatch = useDispatch();
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
 
-    const email = formData.get('email') as string;
-    const isValid = validate(email);
-    console.log(email, isValid);
+    const email = formData.get("email") as string;
+    const isInValid = !!validate(email).email;
   };
 
   return (
-  <Wrapper>
-    <form onSubmit={handleSubmit}>
-      <Field
-        name="email"
-        placeholder={t(data.placeholder)}
-      />
-      <Button id="form-btn-klaviyo" {...data.btn} />
-    </form>
-  </Wrapper>
-)};
+    <Wrapper>
+      <form onSubmit={handleSubmit}>
+        <Field name="email" placeholder={t(data.placeholder)} />
+        <Button id="form-btn-klaviyo" {...data.btn} text={t(data.btn.text)} />
+      </form>
+    </Wrapper>
+  );
+};
 
 export default Klaviyo;

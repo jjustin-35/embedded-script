@@ -2,12 +2,12 @@ type ErrorType = {
   email?: string;
 };
 
-const validate = (values: any) => {
+const validate = (email: string) => {
   const errors: ErrorType = {};
 
-  if (!values.email) {
+  if (!email) {
     errors.email = 'no email';
-  } else if (!/^.+@.+$/i.test(values.email)) {
+  } else if (!/^.+@.+$/i.test(email)) {
     errors.email = 'email error';
   }
 

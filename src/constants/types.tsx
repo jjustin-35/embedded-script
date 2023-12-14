@@ -42,3 +42,31 @@ export type ButtonType = ButtonStyleType & {
   onClick?: (e?: React.MouseEvent | React.MouseEvent) => void;
   t?: TFunctionType;
 };
+
+export type PopupType =
+  | 'klaviyo_existed'
+  | 'klaviyo_register'
+  | 'klaviyo_failed'
+  | 'klaviyo_done'
+  | 'none'
+
+export type PopupContentType = {
+  size?: 'large' | 'small';
+  button?: ButtonType;
+  cancelButton?: Pick<ButtonType, 'btnColor'>;
+  backgroundColor?: string;
+  dividerColor?: string;
+  backgroundImage?: string;
+  fontColor?: string;
+  image?: ImageType;
+  title?: string;
+  subtitle?: string;
+  desc?: string;
+  variant?: 'message' | 'event';
+  href?: string;
+  isExternal?: boolean;
+  target?: '_blank' | '_self';
+  id?: string;
+};
+
+export type ApiMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
