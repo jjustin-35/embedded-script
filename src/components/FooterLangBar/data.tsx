@@ -15,8 +15,4 @@ export const footerLinks = [
     text: 'security',
     linkSrc: `${KDAN_WEBSITE}/security`,
   },
-  {
-    key: 'cookie',
-    text: 'cookie-settings',
-  },
 ];
