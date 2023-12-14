@@ -39,9 +39,10 @@ const Info = ({ t, type, dataset }: Props) => {
               const isHidden = linkItem.isTemplate && isNotEnAndJa;
 
               if (isHidden) return null;
+
               return (
                 <a
-                  href={t(`link:${linkItem.href}`, { ...(linkItem.localeParam && linkItem.localeParam) })}
+                  href={linkItem.hrefs[lng] || linkItem.hrefs[language.EN]}
                   target={linkItem.target || '_self'}
                   key={`footer_link_${linkItem.text}`}
                 >

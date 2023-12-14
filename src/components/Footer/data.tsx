@@ -1,4 +1,6 @@
 import config from "../../config";
+import { LangType } from "../../constants/types";
+import language from "../../constants/language";
 
 type MediaItemType = {
   name: string;
@@ -19,7 +21,7 @@ type NewsLetterType = {
 
 type InfoMenuItemsType = {
   text: string;
-  href: string;
+  hrefs: Record<string, string>;
   isExternal?: boolean;
   target?: string;
   rel?: string;
@@ -47,11 +49,9 @@ export type DataType = {
 const {
   KDAN_WEBSITE,
   CREATIVE_STORE,
-  CREATIVE_STORE_CN,
   DOTTEDSIGN,
   DOTTEDSIGN_CN,
   KDAN_CLOUD,
-  KDAN_CLOUD_CN,
   MARK_UP,
   ANIZONE,
   ANIZONE_CN,
@@ -59,6 +59,8 @@ const {
   ADNEX,
   SUPPORT_CENTER,
 } = config;
+
+const { EN, JA, ZH_TW, ZH_CN, KO, ES } = language;
 
 const data: DataType = {
   socialMedia: {
@@ -107,27 +109,69 @@ const data: DataType = {
         items: [
           {
             text: "About Us",
-            href: `${KDAN_WEBSITE}/aboutus`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/about`,
+              [JA]: `${KDAN_WEBSITE}/ja/about`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/about`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/about`,
+              [KO]: `${KDAN_WEBSITE}/ko/about`,
+              [ES]: `${KDAN_WEBSITE}/es/about`,
+            },
           },
           {
             text: "Leadership",
-            href: `${KDAN_WEBSITE}/leadership`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/leadership`,
+              [JA]: `${KDAN_WEBSITE}/ja/leadership`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/leadership`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/leadership`,
+              [KO]: `${KDAN_WEBSITE}/ko/leadership`,
+              [ES]: `${KDAN_WEBSITE}/es/leadership`,
+            },
           },
           {
             text: "Career",
-            href: `${KDAN_WEBSITE}/career`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/career`,
+              [JA]: `${KDAN_WEBSITE}/ja/career`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/career`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/career`,
+              [KO]: `${KDAN_WEBSITE}/ko/career`,
+              [ES]: `${KDAN_WEBSITE}/es/career`,
+            },
           },
           {
             text: "Contact Us",
-            href: `${KDAN_WEBSITE}/contact`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/contact`,
+              [JA]: `${KDAN_WEBSITE}/ja/contact`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/contact`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/contact`,
+              [KO]: `${KDAN_WEBSITE}/ko/contact`,
+              [ES]: `${KDAN_WEBSITE}/es/contact`,
+            },
           },
           {
             text: "Press Center",
-            href: `${KDAN_WEBSITE}/press`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/press`,
+              [JA]: `${KDAN_WEBSITE}/ja/press`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/press`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/press`,
+              [KO]: `${KDAN_WEBSITE}/ko/press`,
+              [ES]: `${KDAN_WEBSITE}/es/press`,
+            },
           },
           {
             text: "gdpr-page",
-            href: `${KDAN_WEBSITE}/trust/gdpr`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/trust/gdpr`,
+              [JA]: `${KDAN_WEBSITE}/ja/trust/gdpr`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/trust/gdpr`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/trust/gdpr`,
+              [KO]: `${KDAN_WEBSITE}/ko/trust/gdpr`,
+              [ES]: `${KDAN_WEBSITE}/es/trust/gdpr`,
+            },
           },
         ],
       },
@@ -137,43 +181,72 @@ const data: DataType = {
         items: [
           {
             text: "Animation Desk",
-            href: `${KDAN_WEBSITE}/animation-desk`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/animation-desk`,
+              [JA]: `${KDAN_WEBSITE}/ja/animation-desk`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/animation-desk`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/animation-desk`,
+              [KO]: `${KDAN_WEBSITE}/ko/animation-desk`,
+              [ES]: `${KDAN_WEBSITE}/es/animation-desk`,
+            },
           },
           {
             text: "Markup",
-            href: "markups-link",
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              MARK_UP,
+            hrefs: {
+              [EN]: MARK_UP,
+              [JA]: `${MARK_UP}/ja`,
+              [ZH_TW]: `${MARK_UP}/zh-tw`,
+              [ZH_CN]: `${MARK_UP}/zh-cn`,
+              [KO]: `${MARK_UP}/ko`,
+              [ES]: `${MARK_UP}/es`,
             },
+            rel: "noreferrer noopener",
           },
           {
             text: "NoteLedge",
-            href: `${KDAN_WEBSITE}/noteledge`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/noteledge`,
+              [JA]: `${KDAN_WEBSITE}/ja/noteledge`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/noteledge`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/noteledge`,
+              [KO]: `${KDAN_WEBSITE}/ko/noteledge`,
+              [ES]: `${KDAN_WEBSITE}/es/noteledge`,
+            },
           },
           {
             text: "Write-on Video",
-            href: `${KDAN_WEBSITE}/writeon-video`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/write-on-video`,
+              [JA]: `${KDAN_WEBSITE}/ja/write-on-video`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/write-on-video`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/write-on-video`,
+              [KO]: `${KDAN_WEBSITE}/ko/write-on-video`,
+              [ES]: `${KDAN_WEBSITE}/es/write-on-video`,
+            },
           },
           {
             text: "Inspod",
-            href: INSPOD,
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              INSPOD,
+            hrefs: {
+              [EN]: INSPOD,
+              [JA]: `${INSPOD}/ja`,
+              [ZH_TW]: `${INSPOD}/zh-tw`,
+              [ZH_CN]: `${INSPOD}/zh-cn`,
+              [KO]: `${INSPOD}/ko`,
+              [ES]: `${INSPOD}/es`,
             },
+            rel: "noreferrer noopener",
           },
           {
             text: "AniZone",
-            href: ANIZONE,
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              ANIZONE,
-              ANIZONE_CN,
+            hrefs: {
+              [EN]: ANIZONE,
+              [JA]: `${ANIZONE}/ja`,
+              [ZH_TW]: `${ANIZONE}/zh-tw`,
+              [ZH_CN]: `${ANIZONE}/zh-cn`,
+              [KO]: `${ANIZONE}/ko`,
+              [ES]: `${ANIZONE}/es`,
             },
+            rel: "noreferrer noopener",
           },
         ],
       },
@@ -183,27 +256,69 @@ const data: DataType = {
         items: [
           {
             text: "PDF Reader",
-            href: `${KDAN_WEBSITE}/pdf-reader`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/pdf-reader`,
+              [JA]: `${KDAN_WEBSITE}/ja/pdf-reader`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/pdf-reader`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/pdf-reader`,
+              [KO]: `${KDAN_WEBSITE}/ko/pdf-reader`,
+              [ES]: `${KDAN_WEBSITE}/es/pdf-reader`,
+            },
           },
           {
             text: "Kdan Office",
-            href: `${KDAN_WEBSITE}/kdan-office`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/kdan-office`,
+              [JA]: `${KDAN_WEBSITE}/ja/kdan-office`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/kdan-office`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/kdan-office`,
+              [KO]: `${KDAN_WEBSITE}/ko/kdan-office`,
+              [ES]: `${KDAN_WEBSITE}/es/kdan-office`,
+            },
           },
           {
             text: "Pocket Scanner",
-            href: `${KDAN_WEBSITE}/pocket-scanner`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/pocket-scanner`,
+              [JA]: `${KDAN_WEBSITE}/ja/pocket-scanner`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/pocket-scanner`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/pocket-scanner`,
+              [KO]: `${KDAN_WEBSITE}/ko/pocket-scanner`,
+              [ES]: `${KDAN_WEBSITE}/es/pocket-scanner`,
+            },
           },
           {
             text: "title-sdk",
-            href: `${KDAN_WEBSITE}/pdf-sdk`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/pdf-sdk`,
+              [JA]: `${KDAN_WEBSITE}/ja/pdf-sdk`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/pdf-sdk`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/pdf-sdk`,
+              [KO]: `${KDAN_WEBSITE}/ko/pdf-sdk`,
+              [ES]: `${KDAN_WEBSITE}/es/pdf-sdk`,
+            },
           },
           {
             text: "PDF Converter SDK",
-            href: `${KDAN_WEBSITE}/pdf-converter-sdk`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/pdf-converter-sdk`,
+              [JA]: `${KDAN_WEBSITE}/ja/pdf-converter-sdk`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/pdf-converter-sdk`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/pdf-converter-sdk`,
+              [KO]: `${KDAN_WEBSITE}/ko/pdf-converter-sdk`,
+              [ES]: `${KDAN_WEBSITE}/es/pdf-converter-sdk`,
+            },
           },
           {
             text: "PDF Templates",
-            href: `${KDAN_WEBSITE}/pdf-templates`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/pdf-templates`,
+              [JA]: `${KDAN_WEBSITE}/ja/pdf-templates`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/pdf-templates`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/pdf-templates`,
+              [KO]: `${KDAN_WEBSITE}/ko/pdf-templates`,
+              [ES]: `${KDAN_WEBSITE}/es/pdf-templates`,
+            },
             isTemplate: true,
             id: "BtnClick_Explore_PDFtemplates",
           },
@@ -215,17 +330,26 @@ const data: DataType = {
         items: [
           {
             text: "DottedSign",
-            href: DOTTEDSIGN,
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              DOTTEDSIGN,
-              DOTTEDSIGN_CN,
+            hrefs: {
+              [EN]: DOTTEDSIGN,
+              [JA]: `${DOTTEDSIGN}/ja`,
+              [ZH_TW]: `${DOTTEDSIGN}/zh-tw`,
+              [ZH_CN]: `${DOTTEDSIGN}/zh-cn`,
+              [KO]: `${DOTTEDSIGN}/ko`,
+              [ES]: `${DOTTEDSIGN}/es`,
             },
+            rel: "noreferrer noopener",
           },
           {
             text: "DottedSignAPI",
-            href: `${KDAN_WEBSITE}/esignature-api`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/esignature-api`,
+              [JA]: `${KDAN_WEBSITE}/ja/esignature-api`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/esignature-api`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/esignature-api`,
+              [KO]: `${KDAN_WEBSITE}/ko/esignature-api`,
+              [ES]: `${KDAN_WEBSITE}/es/esignature-api`,
+            },
           },
         ],
       },
@@ -235,23 +359,43 @@ const data: DataType = {
         items: [
           {
             text: "bus-1-title",
-            href: `${KDAN_WEBSITE}/esign-digital-transformation`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/esign-digital-transformation`,
+              [JA]: `${KDAN_WEBSITE}/ja/esign-digital-transformation`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/esign-digital-transformation`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/esign-digital-transformation`,
+              [KO]: `${KDAN_WEBSITE}/ko/esign-digital-transformation`,
+              [ES]: `${KDAN_WEBSITE}/es/esign-digital-transformation`,
+            },
           },
           {
             text: "bus-4-title",
-            href: "adnex-link",
-            isExternal: true,
-            localeParam: {
-              ADNEX,
+            hrefs: {
+              [EN]: `${ADNEX}/en`,
+              [ZH_TW]: `${ADNEX}/zh-tw`,
             },
           },
           {
             text: "bus-3-title",
-            href: `${KDAN_WEBSITE}/document-ai-solution`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/document-ai-solution`,
+              [JA]: `${KDAN_WEBSITE}/ja/document-ai-solution`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/document-ai-solution`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/document-ai-solution`,
+              [KO]: `${KDAN_WEBSITE}/ko/document-ai-solution`,
+              [ES]: `${KDAN_WEBSITE}/es/document-ai-solution`,
+            },
           },
           {
             text: "bus-2-title",
-            href: `${KDAN_WEBSITE}/creative-solution`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/creative-solution`,
+              [JA]: `${KDAN_WEBSITE}/ja/creative-solution`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/creative-solution`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/creative-solution`,
+              [KO]: `${KDAN_WEBSITE}/ko/creative-solution`,
+              [ES]: `${KDAN_WEBSITE}/es/creative-solution`,
+            },
           },
         ],
       },
@@ -261,39 +405,54 @@ const data: DataType = {
         items: [
           {
             text: "Kdan Blog",
-            href: "",
-            isExternal: true,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/blog`,
+            },
             rel: "noreferrer noopener",
           },
           {
             text: "Kdan Cloud",
-            href: KDAN_CLOUD,
+            hrefs: {
+              [EN]: KDAN_CLOUD,
+              [JA]: `${KDAN_CLOUD}/ja`,
+              [ZH_TW]: `${KDAN_CLOUD}/zh-tw`,
+              [ZH_CN]: `${KDAN_CLOUD}/zh-cn`,
+            },
             isExternal: true,
             rel: "noreferrer noopener",
-            localeParam: {
-              KDAN_CLOUD,
-              KDAN_CLOUD_CN,
-            },
           },
           {
             text: "FAQ",
-            href: SUPPORT_CENTER,
-            isExternal: true,
+            hrefs: {
+              [EN]: `${SUPPORT_CENTER}/en-us`,
+              [JA]: `${SUPPORT_CENTER}/ja`,
+              [ZH_TW]: `${SUPPORT_CENTER}/zh-tw`,
+              [ZH_CN]: `${SUPPORT_CENTER}/zh-cn`,
+            },
             rel: "noreferrer noopener",
           },
           {
             text: "All Products & Services",
-            href: `${KDAN_WEBSITE}/products`,
+            hrefs: {
+              [EN]: `${KDAN_WEBSITE}/products`,
+              [JA]: `${KDAN_WEBSITE}/ja/products`,
+              [ZH_TW]: `${KDAN_WEBSITE}/zh-tw/products`,
+              [ZH_CN]: `${KDAN_WEBSITE}/zh-cn/products`,
+              [KO]: `${KDAN_WEBSITE}/ko/products`,
+              [ES]: `${KDAN_WEBSITE}/es/products`,
+            },
           },
           {
             text: "All Plans & Pricing",
-            href: CREATIVE_STORE,
-            isExternal: true,
-            rel: "noreferrer noopener",
-            localeParam: {
-              CREATIVE_STORE,
-              CREATIVE_STORE_CN,
+            hrefs: {
+              [EN]: CREATIVE_STORE,
+              [JA]: `${CREATIVE_STORE}/ja`,
+              [ZH_TW]: `${CREATIVE_STORE}/zh-tw`,
+              [ZH_CN]: `${CREATIVE_STORE}/zh-cn`,
+              [KO]: `${CREATIVE_STORE}/ko`,
+              [ES]: `${CREATIVE_STORE}/es`,
             },
+            rel: "noreferrer noopener",
           },
         ],
       },
